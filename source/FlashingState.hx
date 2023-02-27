@@ -37,7 +37,7 @@ class FlashingState extends MusicBeatState
 		warnText.screenCenter(Y);
 		//add(warnText);
 		
-		addVirtualPad(LEFT_FULL, A_B_C);
+		addVirtualPad(NONE, A_B);
 	}
 
 	override function update(elapsed:Float)
