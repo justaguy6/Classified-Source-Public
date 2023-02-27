@@ -247,13 +247,34 @@ class PlayState extends MusicBeatState
 	public var laneUnderlayP2:FlxSpriteExtra;
 
 
+	var dadbattleBlack:BGSprite;
+	var dadbattleLight:BGSprite;
+	var dadbattleSmokes:FlxSpriteGroup;
+
+	var phillyLightsColors:Array<FlxColor>;
+	var phillyWindow:BGSprite;
+	var phillyStreet:BGSprite;
+	var phillyTrain:BGSprite;
+	var blammedLightsBlack:FlxSprite;
+	var phillyWindowEvent:BGSprite;
+	var trainSound:FlxSound;
+	
+	
+	var phillyGlowGradient:PhillyGlow.PhillyGlowGradient;
+	var phillyGlowParticles:FlxTypedGroup<PhillyGlow.PhillyGlowParticle>;
+
+	var limoKillingState:Int = 0;
+	var bgGhouls:BGSprite;
+	var upperBoppers:BGSprite;
+	
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
 	public var camGame:FlxClippedCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
-
+        var bottomBoppers:BGSprite;
+	var santa:BGSprite;
 
 	var lyrics:FlxText;
 	var lyrIcon:HealthIcon;
