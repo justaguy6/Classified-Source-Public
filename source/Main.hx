@@ -17,7 +17,7 @@ import lime.app.Application;
 import openfl.events.UncaughtErrorEvent;
 import haxe.CallStack;
 import haxe.io.Path;
-import 
+ 
 import sys.FileSystem;
 import sys.io.File;
 import sys.io.Process;
