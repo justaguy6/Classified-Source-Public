@@ -177,6 +177,11 @@ class ClassifiedCredits extends MusicBeatState
         add(vortexaskedforthis);
 
         updateTextShit();
+	    
+	#if android
+                addVirtualPad(LEFT_RIGHT, A_B);
+                #end    
+	    
         FlxG.sound.playMusic(Paths.music("classified_credits"), 1);
     }
 
