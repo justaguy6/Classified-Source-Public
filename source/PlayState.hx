@@ -278,13 +278,27 @@ class PlayState extends MusicBeatState
 
 	var lyrics:FlxText;
 	var lyrIcon:HealthIcon;
+        var limo:BGSprite;
+	var tankmanRun:FlxTypedGroup<TankmenBG>;
+	var fastCar:BGSprite;
+	
+	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
+	var dialogueJson:DialogueFile = null;
 
+	
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
+        var foregroundSprites:FlxTypedGroup<BGSprite>;
+	var tankWatchtower:BGSprite;
+	var tankGround:BGSprite;
+	var grpLimoParticles:FlxTypedGroup<BGSprite>;
+	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
+	var halloweenBG:BGSprite;
+	var halloweenWhite:BGSprite;
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -301,6 +315,13 @@ class PlayState extends MusicBeatState
 	public var skipCountdown:Bool = false;
 	var songLength:Float = 0;
 
+	var heyTimer:Float;
+	var limoMetalPole:BGSprite;
+	var limoLight:BGSprite;
+	var limoCorpse:BGSprite;
+	var limoCorpseTwo:BGSprite;
+	var bgGirls:BackgroundGirls;
+	
 	public var boyfriendCameraOffset:Array<Float> = null;
 	public var opponentCameraOffset:Array<Float> = null;
 	public var girlfriendCameraOffset:Array<Float> = null;
