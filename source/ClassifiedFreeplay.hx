@@ -112,6 +112,11 @@ class ClassifiedFreeplay extends MusicBeatState
         add(warningTxt);
 
         super.create();
+	    
+	#if android
+                addVirtualPad(LEFT_RIGHT, A_B);
+                #end    
+	    
         updatePortraits();
 
     }
