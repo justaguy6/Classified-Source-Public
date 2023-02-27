@@ -111,6 +111,11 @@ class ClassifiedMainMenu extends MusicBeatState
         cum.x = (button.x + button.width) + 10;
         cum.y = y;
         add(cum);
+        
+        #if android
+                addVirtualPad(UP_DOWN, A_B_C_X);
+                #end
+        
     }
 
 
@@ -169,10 +174,10 @@ class ClassifiedMainMenu extends MusicBeatState
             MusicBeatState.switchState(new TitleState());
         }
 
-        if(FlxG.keys.justPressed.B){
+        if(FlxG.keys.justPressed.B #if android || virtualPad.buttonC.justPressed #end){
             MusicBeatState.switchState(new ClassifiedBetaFreeplay());
         }
-        if(FlxG.keys.justPressed.F){
+        if(FlxG.keys.justPressed.F #if android || virtualPad.buttonX.justPressed #end){
             MusicBeatState.switchState(new ClassifiedFreeplay());
         }
         
