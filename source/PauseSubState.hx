@@ -143,6 +143,8 @@ class PauseSubState extends MusicBeatSubstate
 		add(levelDifficulty);
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+				 
+		addVirtualPad(UP_DOWN, A);		 
 	}
 
 	var holdTime:Float = 0;
