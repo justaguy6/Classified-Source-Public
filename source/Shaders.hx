@@ -628,7 +628,7 @@ void main() {
                 dept.value = [0.0];
 
                 xrot.value = [0.0];
-                yrot = [0.0];
+                yrot.value = [0.0];
 		
 		super();
 	}
