@@ -3,6 +3,7 @@ package;
 import openfl.display.BitmapData;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
+import openfl.utils.Assets;
 
 class WateryShader extends FlxBasic
 {
@@ -11,7 +12,7 @@ class WateryShader extends FlxBasic
 
     public function new():Void{
         super();
-        shader.distortTexture.input = BitmapData.fromFile(Paths.getPreloadPath('images/heatwave.png'));
+        shader.distortTexture.input = Assets.getBitmapData(Paths.getPreloadPath('images/heatwave.png'));
     }
 
     override public function update(elapsed:Float):Void{
