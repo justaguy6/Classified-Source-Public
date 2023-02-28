@@ -2,7 +2,7 @@ package;
 
 import flixel.math.FlxMath;
 import haxe.Timer;
-import flixel.system.FlxAssets.FlxShader;
+import FNFShaderFix.tools.FlxShader;
 
 class OldTVShader extends FlxShader {
     @:glFragmentSource('
