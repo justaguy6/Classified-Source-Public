@@ -95,10 +95,13 @@ class Main extends Sprite
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
 		
+		#if desktop 
 		trace(FlxG.renderBlit);
 		FlxG.mouse.useSystemCursor = true;
+		#elseif html5
 		FlxG.autoPause = false;
-
+                #end
+			
 		#if CRASH_HANDLER
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 		#end
