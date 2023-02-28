@@ -16,7 +16,7 @@ class ClientPrefs {
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
 	public static var freeplayUnlocked:Bool = false;
-	public static var shaders:String = "All";
+	public static var shaders:Bool = false;
 	public static var laneUnderlay:Float = 0;
 	public static var framerate:Int = 60;
 	public static var cursing:Bool = true;
