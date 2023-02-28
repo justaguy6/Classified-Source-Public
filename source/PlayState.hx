@@ -209,6 +209,8 @@ class PlayState extends MusicBeatState
 	var gf_xCAM:Float = 0;
 	var gf_yCAM:Float = 0;
 
+	var bgLimo:BGSprite;
+	
 	public var gfSpeed:Int = 1;
 	public var health:Float = 1;
 	public var combo:Int = 0;
