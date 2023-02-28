@@ -269,10 +269,10 @@ class Tiltshift extends FlxShader
 		 
 		// I am hardcoding the constants like a jerk
 			
-		uniform float bluramount  = 1.0;
-		uniform float center      = 1.0;
-		const float stepSize    = 0.004;
-		const float steps       = 3.0;
+		uniform float bluramount;
+		uniform float center;
+		const float stepSize = 0.004;
+		const float steps = 3.0;
 		 
 		const float minOffs     = (float(steps-1.0)) / -2.0;
 		const float maxOffs     = (float(steps-1.0)) / +2.0;
@@ -311,6 +311,9 @@ class Tiltshift extends FlxShader
 		}')
 	public function new()
 	{
+		bluramount.value = [1.0];
+                center.value = [1.0];
+
 		super();
 	}
 }
@@ -547,10 +550,10 @@ class ThreeDEffect extends Effect{
 class ThreeDShader extends FlxShader{
 	@:glFragmentSource('
 	#pragma header
-	uniform float xrot = 0.0;
-	uniform float yrot = 0.0;
-	uniform float zrot = 0.0;
-	uniform float dept = 0.0;
+	uniform float xrot;
+	uniform float yrot;
+	uniform float zrot;
+	uniform float dept;
 	float alph = 0;
 float plane( in vec3 norm, in vec3 po, in vec3 ro, in vec3 rd ) {
     float de = dot(norm, rd);
@@ -620,6 +623,13 @@ void main() {
 	')
 	
 	public function new(){
+		
+		zrot.value = [0.0];
+                dept.value = [0.0];
+
+                xrot.value = [0.0];
+                yrot = [0.0];
+		
 		super();
 	}
 	
