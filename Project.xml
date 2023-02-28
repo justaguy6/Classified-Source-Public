@@ -109,7 +109,7 @@
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
-	<haxelib name="FNFShaderFix"/>
+	<haxelib name="hxShaders"/>
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
 	<haxelib name="hxCodec" if="desktop"/>
 	<haxelib name="faxe" if='switch'/>
