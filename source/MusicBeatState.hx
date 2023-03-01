@@ -161,6 +161,7 @@ class MusicBeatState extends FlxUIState
 		}
 		FlxTransitionableState.skipNextTransOut = false;
 
+		#if windows
 		largeSmellySweatyDeliciousManBoobs = new OldTVShader();
 		largeSmellySweatyDeliciousManBoobs.iTime.value = [0];
 
@@ -196,6 +197,7 @@ class MusicBeatState extends FlxUIState
 			FlxG.game.setFilters([]);
 			allowedTo = false;
 		}
+		#end
 	}
 
 	override function update(elapsed:Float)
