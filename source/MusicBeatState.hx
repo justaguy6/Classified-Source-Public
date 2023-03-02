@@ -144,15 +144,12 @@ class MusicBeatState extends FlxUIState
 	override function create() {
 		camBeat = FlxG.camera;
 		var skip:Bool = FlxTransitionableState.skipNextTransOut;
-		// Paths.clearStoredMemory();
-		// Paths.clearUnusedMemory();
 		super.create();
-		
+
 		if(!skip) {
 			openSubState(new CustomFadeTransition(0.7, true));
 		}
 		FlxTransitionableState.skipNextTransOut = false;
-
 	}
 
 	override function update(elapsed:Float)
