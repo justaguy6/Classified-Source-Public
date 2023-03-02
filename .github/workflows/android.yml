@@ -6,9 +6,9 @@ name: Android Build
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ notweuz-main ]
+    branches: [ main ]
   pull_request:
-    branches: [ notweuz-main ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -54,7 +54,7 @@ jobs:
           haxelib --quiet install flixel-ui
           haxelib --quiet install hscript
           haxelib --quiet install flixel-addons
-          haxelib --quiet install hxCodec
+          haxelib --quiet install hxCodechxCodec
           haxelib git hxShaders https://github.com/ItsyourboyJonnycat/hxShaders.git
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib list
