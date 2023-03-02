@@ -37,14 +37,7 @@ class MusicBeatState extends FlxUIState
 
 	public static var camBeat:FlxCamera;
 
-	public static var largeSmellySweatyDeliciousManBoobs:OldTVShader;
-	public static var filledJarOfPiss:VCRDistortionShader;	
-	var shitcanfartballs:ChromaticAberrationEffect;
-	var songWithNoShader:Array<String> = ['scuttlebug', 'better-off', 'better off', 'shrouded', 'beta better off', 'beta-better-off','beta scuttlebug','beta-scuttlebug'];
-	public static var allowedTo:Bool = true;
-	public static var filter:ShaderFilter;
-	public static var filter2:ShaderFilter;
-
+	
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
 
@@ -154,8 +147,7 @@ class MusicBeatState extends FlxUIState
 		// Paths.clearStoredMemory();
 		// Paths.clearUnusedMemory();
 		super.create();
-		FlxG.mouse.visible = false;
-
+		
 		if(!skip) {
 			openSubState(new CustomFadeTransition(0.7, true));
 		}
