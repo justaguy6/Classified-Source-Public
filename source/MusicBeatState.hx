@@ -40,7 +40,7 @@ class MusicBeatState extends FlxUIState
 	public static var largeSmellySweatyDeliciousManBoobs:OldTVShader;
 	public static var filledJarOfPiss:VCRDistortionShader;	
 	var shitcanfartballs:ChromaticAberrationEffect;
-	var songWithNoShader:Array<String> = ['scuttlebug', 'better-off', 'better off', 'shrouded', 'beta better off', 'beta-better-off','beta scuttlebug','beta-scuttlebug'];
+	var songWithNoShader:Array<String> = [''];
 	public static var allowedTo:Bool = true;
 	public static var filter:ShaderFilter;
 	public static var filter2:ShaderFilter;
