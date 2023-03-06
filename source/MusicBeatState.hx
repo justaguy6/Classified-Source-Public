@@ -258,7 +258,7 @@ class MusicBeatState extends FlxUIState
 		}
 		FlxTransitionableState.skipNextTransIn = false;
 		FlxG.switchState(nextState);
-	
+	}
 	public static function switchStateSM64(nextState:FlxState) {
 		// Custom made Trans in
 		var curState:Dynamic = FlxG.state;
