@@ -158,49 +158,12 @@ class MusicBeatState extends FlxUIState
 		}
 		FlxTransitionableState.skipNextTransOut = false;
 		
-		
-		filledJarOfPiss = new VCRDistortionShader();
-		filledJarOfPiss.iTime.value = [0];
-
-		filledJarOfPiss.vignetteOn.value = [false];
-		filledJarOfPiss.perspectiveOn.value = [false];
-		filledJarOfPiss.distortionOn.value = [false];
-		filledJarOfPiss.vignetteMoving.value = [false];
-		filledJarOfPiss.glitchModifier.value = [0];
-		filledJarOfPiss.iResolution.value = [FlxG.width, FlxG.height];
-
-		shitcanfartballs = new ChromaticAberrationEffect();
-		shitcanfartballs.setChrome(0.00225);
-
-		filter = new ShaderFilter(shitcanfartballs.shader);
-		filter2 = new ShaderFilter(largeSmellySweatyDeliciousManBoobs);
-		if(PlayState.SONG != null){
-			// trace(PlayState.curSong.toLowerCase());
-			if(songWithNoShader.contains(PlayState.curSong.toLowerCase()) || FlxG.save.data.shaders == "Song-Specific" || FlxG.save.data.shaders == "Disabled"){
-				FlxG.game.setFilters([]);
-				allowedTo = false;
-			}
-			else if(FlxG.save.data.shaders == "All"){
-				FlxG.game.setFilters([filter, filter2]); 
-				allowedTo = true;
-			}	
-		}else if(FlxG.save.data.shaders == "All"){
-			FlxG.game.setFilters([filter, filter2]); 
-			allowedTo = true;
-		}else if(FlxG.save.data.shaders == "Song-Specific" || FlxG.save.data.shaders == "Disabled"){
-			FlxG.game.setFilters([]);
-			allowedTo = false;
-		}
 	}
 
 	override function update(elapsed:Float)
 	{
 		//everyStep();
 
-		if(allowedTo){
-			filledJarOfPiss.iTime.value[0] += elapsed * 1.25;
-			
-		}
 		
 		var oldStep:Int = curStep;
 
@@ -296,7 +259,7 @@ class MusicBeatState extends FlxUIState
 		}
 		FlxTransitionableState.skipNextTransIn = false;
 		FlxG.switchState(nextState);
-		FlxG.game.setFilters([filter, filter2]);
+		
 	}
 	public static function switchStateSM64(nextState:FlxState) {
 		// Custom made Trans in
@@ -319,7 +282,7 @@ class MusicBeatState extends FlxUIState
 		}
 		FlxTransitionableState.skipNextTransIn = false;
 		FlxG.switchState(nextState);
-		FlxG.game.setFilters([filter, filter2]);
+		
 	}
 	public static function resetState() {
 		MusicBeatState.switchState(FlxG.state);
