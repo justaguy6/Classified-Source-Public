@@ -158,9 +158,7 @@ class MusicBeatState extends FlxUIState
 		}
 		FlxTransitionableState.skipNextTransOut = false;
 		
-		largeSmellySweatyDeliciousManBoobs = new OldTVShader();
-		largeSmellySweatyDeliciousManBoobs.iTime.value = [0];
-
+		
 		filledJarOfPiss = new VCRDistortionShader();
 		filledJarOfPiss.iTime.value = [0];
 
