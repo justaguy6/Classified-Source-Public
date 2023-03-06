@@ -199,7 +199,7 @@ class MusicBeatState extends FlxUIState
 
 		if(allowedTo){
 			filledJarOfPiss.iTime.value[0] += elapsed * 1.25;
-			largeSmellySweatyDeliciousManBoobs.iTime.value[0] += elapsed * 1.25;	
+			
 		}
 		
 		var oldStep:Int = curStep;
