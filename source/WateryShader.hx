@@ -1,5 +1,5 @@
 package;
-
+#if !android
 import openfl.display.BitmapData;
 import flixel.FlxBasic;
 import FlxShader;
@@ -58,3 +58,4 @@ class FabsShaderGLSL extends FlxShader
         super();
     }
 }
+#end
