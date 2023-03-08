@@ -48,6 +48,8 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
+		
+		Generic.initCrashHandler();
 
 		if (stage != null)
 		{
@@ -84,6 +86,7 @@ class Main extends Sprite
 		}
 	
 		ClientPrefs.loadDefaultKeys();
+		Generic.mode = ROOTDATA;
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 
 		
