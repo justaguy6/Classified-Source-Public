@@ -37,7 +37,7 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
-      - name: Setup Haxe
+      - name: etup Haxe
         uses: krdlab/setup-haxe@v1.1.5
         with:
           haxe-version: 4.2.5
@@ -56,7 +56,7 @@ jobs:
           haxelib --quiet install flixel-addons
           haxelib --quiet install hxCodec
           haxelib git extension-androidtools https://github.com/majigsaw77/extension-androidtools.git
-          haxelib git hxShaders https://github.com/ItsyourboyJonnycat/hxShaders.git
+          haxelib git hxShaders https://github.com/justaguy6/HxShaders
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib list
 
