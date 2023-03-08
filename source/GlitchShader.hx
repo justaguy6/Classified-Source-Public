@@ -4,6 +4,7 @@ import flixel.system.FlxAssets.FlxShader;
 
 // https://www.shadertoy.com/view/MscGzl
 class GlitchShaderA extends FlxShader {
+        // (sirox) tf!? why it have isVar if this variable don't affect anything in shader, bruh
 	@:isVar
 	public var amount(get, set):Float = 0;
 
@@ -24,12 +25,12 @@ class GlitchShaderA extends FlxShader {
 
         vec4 posterize(vec4 color, float numColors)
         {
-            return floor(color * numColors - 0.5) / numColors;
+            return floor(color * vec4(numColors) - vec4(0.5)) / vec4(numColors);
         }
 
         vec2 quantize(vec2 v, float steps)
         {
-            return floor(v * steps) / steps;
+            return floor(v * vec2(steps)) / vec2(steps);
         }
 
         float dist(vec2 a, vec2 b)
@@ -41,17 +42,17 @@ class GlitchShaderA extends FlxShader {
         {   
             vec2 uv = openfl_TextureCoordv;
             float amount = pow(GlitchAmount, 2.0);
-            vec2 pixel = 1.0 / iResolution.xy;    
+            vec2 pixel = vec2(1.0) / iResolution.xy;    
             vec4 color = flixel_texture2D(bitmap, uv);
             float t = mod(mod(iTime, amount * 100.0 * (amount - 0.5)) * 109.0, 1.0);
             vec4 postColor = posterize(color, 16.0);
-            vec4 a = posterize(flixel_texture2D(bitmap, quantize(uv, 64.0 * t) + pixel * (postColor.rb - vec2(.5)) * 100.0), 5.0).rbga;
-            vec4 b = posterize(flixel_texture2D(bitmap, quantize(uv, 32.0 - t) + pixel * (postColor.rg - vec2(.5)) * 1000.0), 4.0).gbra;
-            vec4 c = posterize(flixel_texture2D(bitmap, quantize(uv, 16.0 + t) + pixel * (postColor.rg - vec2(.5)) * 20.0), 16.0).bgra;
+            vec4 a = posterize(flixel_texture2D(bitmap, quantize(uv, 64.0 * t) + pixel * (postColor.rb - vec2(.5)) * vec2(100.0)), 5.0).rbga;
+            vec4 b = posterize(flixel_texture2D(bitmap, quantize(uv, 32.0 - t) + pixel * (postColor.rg - vec2(.5)) * vec2(1000.0)), 4.0).gbra;
+            vec4 c = posterize(flixel_texture2D(bitmap, quantize(uv, 16.0 + t) + pixel * (postColor.rg - vec2(.5)) * vec2(20.0)), 16.0).bgra;
             gl_FragColor = mix(
                             flixel_texture2D(bitmap, 
-                                    uv + amount * (quantize((a * t - b + c - (t + t / 2.0) / 10.0).rg, 16.0) - vec2(.5)) * pixel * 100.0),
-                            (a + b + c) / 3.0,
+                                    uv + vec2(amount) * (quantize((a * vec4(t) - b + c - vec4(t + t / 2.0) / vec4(10.0)).rg, 16.0) - vec2(.5)) * pixel * vec2(100.0)),
+                            (a + b + c) / vec4(3.0),
                             (0.5 - (dot(color, postColor) - 1.5)) * amount);
         }
     ')
