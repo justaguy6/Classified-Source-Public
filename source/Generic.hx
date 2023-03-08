@@ -2,7 +2,7 @@ package;
 
 import sys.FileSystem;
 #if android
-import android.Hardware;
+//import android.Hardware;
 import android.Permissions;
 import android.os.Environment;
 #end
@@ -109,7 +109,7 @@ class Generic {
 					errMsg
 					+ '\n');
 			}
-			#if android
+			#if !android
 			catch (e:Dynamic)
 			Hardware.toast("Error!\nClouldn't save the crash dump because:\n" + e, ToastType.LENGTH_LONG);
 			#end
@@ -207,7 +207,7 @@ class PermsState extends FlxState {
 			if (callback != null) {
 				callback();
 			}
-        	FlxG.switchState(Type.createInstance(Main.TitleState, []));
+        	FlxG.switchState(Type.createInstance(Main.InitialState, []));
         });
         continuebutton.screenCenter(XY);
         continuebutton.x += 300;
