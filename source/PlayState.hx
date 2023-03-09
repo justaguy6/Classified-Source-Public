@@ -5421,8 +5421,8 @@ class PlayState extends MusicBeatState
 				FlxTween.cancelTweensOf(lime.app.Application.current.window);
 				FlxTween.tween(lime.app.Application.current.window, {x: canWindowMove(directionX, amntX) ? amntX : lime.app.Application.current.window.x, y: canWindowMove(directionY, amntY) ? amntY : lime.app.Application.current.window.y}, 0.3);
 			}
-			if(!note.isSustainNote && incrediblyInflatedHairySmellyBelly.amount < 0.35){
-				incrediblyInflatedHairySmellyBelly.amount += FlxG.random.float(0.005, 0.015);
+			if(!note.isSustainNote){
+				
 			}else{
 				// trace("dudes, dudettes, im thihnkin its too smal to doo anythangz.");
 			}
