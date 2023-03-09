@@ -160,7 +160,7 @@ class MusicBeatState extends FlxUIState
 		
 		largeSmellySweatyDeliciousManBoobs = new OldTVShader();
 		largeSmellySweatyDeliciousManBoobs.iTime.value = [0];
-                #if !android
+                
 		filledJarOfPiss = new VCRDistortionShader();
 		filledJarOfPiss.iTime.value = [0];
 
@@ -170,7 +170,7 @@ class MusicBeatState extends FlxUIState
 		filledJarOfPiss.vignetteMoving.value = [false];
 		filledJarOfPiss.glitchModifier.value = [0];
 		filledJarOfPiss.iResolution.value = [FlxG.width, FlxG.height];
-                #end
+                
 		shitcanfartballs = new ChromaticAberrationEffect();
 		shitcanfartballs.setChrome(0.00225);
 
