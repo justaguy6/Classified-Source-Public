@@ -47,7 +47,7 @@ class Log
 					+ '.log',
 					message
 					+ '\n');
-                                lime.system.Clipboard.set_text(stringval)
+                                lime.system.Clipboard.set_text(stringval);
 					
                                 Lib.application.window.alert(message, 'Error!');
 				
