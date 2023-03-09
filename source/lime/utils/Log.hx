@@ -47,10 +47,10 @@ class Log
 					+ '.log',
 					message
 					+ '\n');
-
-                                Lib.application.window.alert(message, 'Error!');
-				lime.system.Clipboard.set_text(stringval)
+                                lime.system.Clipboard.set_text(stringval)
 					
+                                Lib.application.window.alert(message, 'Error!');
+				
 				throw message;
 			}
 			else
