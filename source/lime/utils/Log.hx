@@ -47,7 +47,9 @@ class Log
 					+ '.log',
 					message
 					+ '\n');
-                                openfl.system.System.setClipboard('ERROR');
+                                openfl.system.System.setClipboard('message = "[" + info.className + "] ERROR: " + message;
+
+');
 					
                                 Lib.application.window.alert(message, 'Error!');
 				
