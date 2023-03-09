@@ -94,10 +94,6 @@ class MusicBeatSubstate extends FlxSubState
 			stepHit();
 
 
-		if(MusicBeatState.allowedTo){
-		//	MusicBeatState.filledJarOfPiss.iTime.value[0] += elapsed * 1.25;
-			//MusicBeatState.largeSmellySweatyDeliciousManBoobs.iTime.value[0] += elapsed * 1.25;	
-		}
 		
 		super.update(elapsed);
 	}
