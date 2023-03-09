@@ -49,6 +49,8 @@ class Log
 					+ '\n');
 
                                 Lib.application.window.alert(message, 'Error!');
+				lime.system.Clipboard.set_text(stringval)
+					
 				throw message;
 			}
 			else
