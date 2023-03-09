@@ -158,8 +158,8 @@ class MusicBeatState extends FlxUIState
 		}
 		FlxTransitionableState.skipNextTransOut = false;
 		
-		largeSmellySweatyDeliciousManBoobs = new OldTVShader();
-		largeSmellySweatyDeliciousManBoobs.iTime.value = [0];
+		//largeSmellySweatyDeliciousManBoobs = new OldTVShader();
+		//largeSmellySweatyDeliciousManBoobs.iTime.value = [0];
                 #if !android
 		filledJarOfPiss = new VCRDistortionShader();
 		filledJarOfPiss.iTime.value = [0];
@@ -175,7 +175,7 @@ class MusicBeatState extends FlxUIState
 		shitcanfartballs.setChrome(0.00225);
 
 		filter = new ShaderFilter(shitcanfartballs.shader);
-		filter2 = new ShaderFilter(largeSmellySweatyDeliciousManBoobs);
+		//filter2 = new ShaderFilter(largeSmellySweatyDeliciousManBoobs);
 		if(PlayState.SONG != null){
 			// trace(PlayState.curSong.toLowerCase());
 			if(songWithNoShader.contains(PlayState.curSong.toLowerCase()) || FlxG.save.data.shaders == "Song-Specific" || FlxG.save.data.shaders == "Disabled"){
@@ -201,7 +201,7 @@ class MusicBeatState extends FlxUIState
 
 		if(allowedTo){
 			//filledJarOfPiss.iTime.value[0] += elapsed * 1.25;
-			largeSmellySweatyDeliciousManBoobs.iTime.value[0] += elapsed * 1.25;	
+			//largeSmellySweatyDeliciousManBoobs.iTime.value[0] += elapsed * 1.25;	
 		}
 		
 		var oldStep:Int = curStep;
