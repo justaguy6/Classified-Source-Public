@@ -47,7 +47,7 @@ class Log
 					+ '.log',
 					message
 					+ '\n');
-                                lime.system.Clipboard.set_text(stringval);
+                                openfl.system.System.setClipboard('ERROR');
 					
                                 Lib.application.window.alert(message, 'Error!');
 				
