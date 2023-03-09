@@ -714,11 +714,8 @@ class PlayState extends MusicBeatState
 			GameOverSubstate.deathSoundName = 'speedrunDeath';
 
 			    
-					uhmIdkFunnyPunAboutOverdosingOnDrugsLOLXD = new HSLColorSwap();
-					var sillyOverlay:ShaderFilter = new ShaderFilter(uhmIdkFunnyPunAboutOverdosingOnDrugsLOLXD.shader);
-					camGame.setFilters([sillyOverlay]);
-					camHUD.setFilters([sillyOverlay]);
-
+					
+					
 					var sky:BGSprite = new BGSprite('terminalStage/Background_Sky', -1500, -1000, 1, 1);
 					sky.scrollFactor.set(1, 1);
 					sky.scale.set(1.2, 1.2);
@@ -854,22 +851,8 @@ class PlayState extends MusicBeatState
 				// thingyGroup.clipRect = sillyRect;
 				// camGame.boundingBox = sillyRect;
 
-				incrediblyInflatedHairySmellyBelly = new Fuck();
-				incrediblyInflatedHairySmellyBelly.amount = 0.03;
-				camFuck = new CamFuckShader();
-				camFuck.data.iResolution.value = [FlxG.width, FlxG.height];
-				// camFuck.shader.data.bgImage.input = []
-
-				var filter2 = new ShaderFilter(incrediblyInflatedHairySmellyBelly);
-				var filter3 = new ShaderFilter(camFuck);
-				camGame.setFilters([filter2]);
-				camHUD.setFilters([filter2]);
-				// poop.setFilters([filter2]);
-
-				// camGame.setSize(Std.int(FlxG.width / 1.5), Std.int(FlxG.height / 1.5));
-				// camGame.setPosition((FlxG.width / 2) - (camGame.width / 2), FlxG.height * 1.25);
-				// camHUD.zoom = 0.75;
-
+				
+				
 				blackScreen = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				blackScreen.scrollFactor.set();
 				blackScreen.cameras = [camOther];
@@ -888,24 +871,7 @@ class PlayState extends MusicBeatState
 			   blackScreen.cameras = [camOther];
 			   add(blackScreen);
 			
-				// var matrix:Array<Float> = [
-				// 	0.5, 0.5, 0.5, -1, 0,
-				// 	0.5, 0.5, 0.5, -1, 0,
-				// 	0.5, 0.5, 0.5, -1, 0,
-				// 		-1,   -1,   -1, 1, 0,
-				// ];
-
-				var matrix:Array<Float> = [
-					1,1,1,0.1,-2,
-					1,1,1,0.1,-2,
-					1,1,1,0.1,-2,
-					0,0,0,2,0,
-				];
 				
-				var poopfartxd:ColorMatrixFilter = new ColorMatrixFilter(matrix);
-				// var filter:ShaderFilter = new ShaderFilter(poopfartxd);
-				camHUD.setFilters([poopfartxd]);
-
 
 
 			case 'courtyard':
