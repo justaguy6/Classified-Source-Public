@@ -1009,7 +1009,8 @@ class PlayState extends MusicBeatState
 				SONICADVENTURE2BITCHHHHH.emitting = false;
 				trace("COCK");
 
-				
+				fart = new WateryShader();
+				filter = new ShaderFilter(fart.shader);
 
 				poopbrah = new FlxSprite().makeGraphic(1280, 720, FlxColor.WHITE);
 				poopbrah.cameras =[camHUD];
@@ -1021,8 +1022,6 @@ class PlayState extends MusicBeatState
 				blackScreen.cameras = [camOther];
 				add(blackScreen);
 				
-				fart = new WateryShader();
-				filter = new ShaderFilter(fart.shader);
 			}
 
 		switch(Paths.formatToSongPath(SONG.song))
