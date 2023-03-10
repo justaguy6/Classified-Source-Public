@@ -713,7 +713,10 @@ class PlayState extends MusicBeatState
 			GameOverSubstate.characterName = 'terminalBFDead';
 			GameOverSubstate.deathSoundName = 'speedrunDeath';
 
-			    
+			                uhmIdkFunnyPunAboutOverdosingOnDrugsLOLXD = new HSLColorSwap();
+					var sillyOverlay:ShaderFilter = new ShaderFilter(uhmIdkFunnyPunAboutOverdosingOnDrugsLOLXD.shader);
+					camGame.setFilters([sillyOverlay]);
+					camHUD.setFilters([sillyOverlay]);
 					
 					
 					var sky:BGSprite = new BGSprite('terminalStage/Background_Sky', -1500, -1000, 1, 1);
@@ -860,7 +863,7 @@ class PlayState extends MusicBeatState
 				var filter2 = new ShaderFilter(incrediblyInflatedHairySmellyBelly);
 				var filter3 = new ShaderFilter(camFuck);
 				camGame.setFilters([filter2]);
-				camHUD.setFilters([filter2
+				camHUD.setFilters([filter2]);
 				
 				blackScreen = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				blackScreen.scrollFactor.set();
