@@ -43,11 +43,11 @@ class FabsShaderGLSL extends FlxShader
 
                 vec2 dst_offset = dst_map_val.xy;
                 dst_offset -= vec2(.5,5.);
-                dst_offset *= 22.;
+                dst_offset *= 2.;
                 dst_offset *= 0.0135; //THIS CONTROLS THE INTENSITY [higher numbers = MORE WAVY]
 
                 //reduce effect towards Y top
-                // dst_offset *= pow(p_m.t, 1.4); //THIS CONTROLS HOW HIGH UP THE SCREEN THE EFFECT GOES [higher numbers = less screen space]
+                dst_offset *= pow(p_m.t, 1.4); //THIS CONTROLS HOW HIGH UP THE SCREEN THE EFFECT GOES [higher numbers = less screen space]
 
                 vec2 dist_tex_coord = p_m.st + dst_offset;
                 gl_FragColor = flixel_texture2D(bitmap, dist_tex_coord); 
