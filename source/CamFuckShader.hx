@@ -14,8 +14,7 @@ class CamFuckShader extends FlxShader
     #pragma header
 
     uniform sampler2D bgImage;
-    uniform vec3 iResolution;
-
+    
     void main()
     {        
         vec2 uv = openfl_TextureCoordv;
