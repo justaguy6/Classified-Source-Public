@@ -851,7 +851,16 @@ class PlayState extends MusicBeatState
 				// thingyGroup.clipRect = sillyRect;
 				// camGame.boundingBox = sillyRect;
 
-				
+				incrediblyInflatedHairySmellyBelly = new Fuck();
+				incrediblyInflatedHairySmellyBelly.amount = 0.03;
+				camFuck = new CamFuckShader();
+				camFuck.data.iResolution.value = [FlxG.width, FlxG.height];
+				// camFuck.shader.data.bgImage.input = []
+
+				var filter2 = new ShaderFilter(incrediblyInflatedHairySmellyBelly);
+				var filter3 = new ShaderFilter(camFuck);
+				camGame.setFilters([filter2]);
+				camHUD.setFilters([filter2
 				
 				blackScreen = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				blackScreen.scrollFactor.set();
@@ -871,7 +880,17 @@ class PlayState extends MusicBeatState
 			   blackScreen.cameras = [camOther];
 			   add(blackScreen);
 			
+				var matrix:Array<Float> = [
+					1,1,1,0.1,-2,
+					1,1,1,0.1,-2,
+					1,1,1,0.1,-2,
+					0,0,0,2,0,
+				];
 				
+				var poopfartxd:ColorMatrixFilter = new ColorMatrixFilter(matrix);
+				// var filter:ShaderFilter = new ShaderFilter(poopfartxd);
+				camHUD.setFilters([poopfartxd]);
+
 
 
 			case 'courtyard':
@@ -5421,8 +5440,8 @@ class PlayState extends MusicBeatState
 				FlxTween.cancelTweensOf(lime.app.Application.current.window);
 				FlxTween.tween(lime.app.Application.current.window, {x: canWindowMove(directionX, amntX) ? amntX : lime.app.Application.current.window.x, y: canWindowMove(directionY, amntY) ? amntY : lime.app.Application.current.window.y}, 0.3);
 			}
-			if(!note.isSustainNote){
-				
+			if(!note.isSustainNote && incrediblyInflatedHairySmellyBelly.amount < 0.35){
+				incrediblyInflatedHairySmellyBelly.amount += FlxG.random.float(0.005, 0.015);
 			}else{
 				// trace("dudes, dudettes, im thihnkin its too smal to doo anythangz.");
 			}
