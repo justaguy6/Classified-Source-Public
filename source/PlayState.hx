@@ -857,9 +857,7 @@ class PlayState extends MusicBeatState
 				incrediblyInflatedHairySmellyBelly = new Fuck();
 				incrediblyInflatedHairySmellyBelly.amount = 0.03;
 				camFuck = new CamFuckShader();
-				camFuck.data.iResolution.value = [FlxG.width, FlxG.height];
-				// camFuck.shader.data.bgImage.input = []
-
+				
 				var filter2 = new ShaderFilter(incrediblyInflatedHairySmellyBelly);
 				var filter3 = new ShaderFilter(camFuck);
 				camGame.setFilters([filter2]);
