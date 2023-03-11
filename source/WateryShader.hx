@@ -1,26 +1,4 @@
-package;
 
-import openfl.display.BitmapData;
-import flixel.FlxBasic;
-import flixel.system.FlxAssets.FlxShader;
-import openfl.utils.Assets;
-
-class WateryShader extends FlxBasic
-{
-    public var shader(default, null):FabsShaderGLSL = new FabsShaderGLSL();
-    var iTime:Float = 0;
-
-    public function new():Void{
-        super();
-        shader.distortTexture.input = Assets.getBitmapData(Paths.file('images/heatwave.png'));
-    }
-
-    override public function update(elapsed:Float):Void{
-        super.update(elapsed);
-        iTime += elapsed;
-        shader.iTime.value = [iTime];
-    }
-}
 package;
 
 import openfl.display.BitmapData;
