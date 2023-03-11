@@ -2,7 +2,7 @@ package;
 
 import openfl.display.BitmapData;
 import flixel.FlxBasic;
-import FlxShader;
+import flixel.system.FlxAssets.FlxShader;
 import openfl.utils.Assets;
 
 class WateryShader extends FlxBasic
