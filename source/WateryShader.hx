@@ -12,7 +12,7 @@ class WateryShader extends FlxBasic
 
     public function new():Void{
         super();
-        shader.distortTexture.input = BitmapData.fromFile(Paths.getPreloadPath('images/heatwave.png'));
+        shader.distortTexture.input = Assets.getBitmapData(Paths.file('images/heatwave.png'));
     }
 
     override public function update(elapsed:Float):Void{
