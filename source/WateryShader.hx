@@ -4,7 +4,7 @@ package;
 import openfl.display.BitmapData;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
-
+import openfl.utils.Assets;
 class WateryShader extends FlxBasic
 {
     public var shader(default, null):FabsShaderGLSL = new FabsShaderGLSL();
