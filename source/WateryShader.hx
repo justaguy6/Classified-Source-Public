@@ -1,8 +1,10 @@
 package;
 
 import openfl.display.BitmapData;
+import openfl.display.Bitmap;
 import flixel.FlxBasic;
 import flixel.system.FlxAssets.FlxShader;
+import openfl.Assets;
 
 class WateryShader extends FlxBasic
 {
@@ -11,7 +13,7 @@ class WateryShader extends FlxBasic
 
     public function new():Void{
         super();
-        shader.distortTexture.input = BitmapData.fromFile(Paths.getPreloadPath('images/heatwave.png'));
+        shader.distortTexture.input = BitmapData.fromImage(Assets.getBitmapData("images/heatwave.png"));
     }
 
     override public function update(elapsed:Float):Void{
@@ -38,7 +40,7 @@ class FabsShaderGLSL extends FlxShader
                 p_d.t -= iTime * 0.05;
                 p_d.t = mod(p_d.t, 1.0);
 
-                vec4 dst_map_val = flixel_texture2D(distortTexture, p_d);
+                vec4 dst_map_val = flx_texture2D(distortTexture, p_d);
 
                 vec2 dst_offset = dst_map_val.xy;
                 dst_offset -= vec2(.5,.5);
@@ -49,7 +51,7 @@ class FabsShaderGLSL extends FlxShader
                 // dst_offset *= pow(p_m.t, 1.4); //THIS CONTROLS HOW HIGH UP THE SCREEN THE EFFECT GOES [higher numbers = less screen space]
 
                 vec2 dist_tex_coord = p_m.st + dst_offset;
-                gl_FragColor = flixel_texture2D(bitmap, dist_tex_coord); 
+                gl_FragColor = flx_texture2D(bitmap, dist_tex_coord); 
         }')
 
     public function new()
